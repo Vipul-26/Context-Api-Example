@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import Login from './components/Login';
-import ApplicationContext  from './ApplicationContext';
+import React, { useState } from "react";
+import Login from "./components/Login";
+import ApplicationContext from "./ApplicationContext";
 
 function App() {
-
   const [isAuth, setIsAuth] = useState(false);
 
   const toggleAuth = () => {
@@ -11,10 +10,12 @@ function App() {
   };
 
   return (
-    <ApplicationContext.Provider value={{ isAuth: isAuth, toggleAuth: toggleAuth }}>
+    <ApplicationContext.Provider
+      value={{ isAuth: isAuth, toggleAuth: toggleAuth }}
+    >
       <Login />
     </ApplicationContext.Provider>
   );
-};
+}
 
 export default App;
